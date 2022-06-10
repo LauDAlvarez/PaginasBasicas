@@ -1,0 +1,312 @@
+<style>
+    :root{
+        --fuente-texto:'Pontano Sans', sans-serif;;
+        --fuente-titulo:'Rubik Bubbles', cursive;;
+        --color-uno:#F7DC6F;
+        --color-dos:#D35400;
+        --color-tres:#DC7633;
+        --color-cuatro:#D4AC0D ;
+        --color-cinco:#F1C40F;
+    }
+    html {
+        background-color: var(--color-tres); 
+        box-sizing: border-box;
+        font-size: 62.5%; /* 1 rem = 10px */    
+        font-family: var(--fuente-titulo);
+        scroll-behavior: smooth;
+    }
+    html::-webkit-scrollbar{
+        width: 7px;
+        background-color: var(--color-dos);
+        padding: 1PX;
+    }
+    html::-webkit-scrollbar-thumb{
+        background-color: var(--color-tres);
+        border: 1PX SOLID black;
+        border-radius: 15px;
+    }
+    *, *:before, *:after {
+        box-sizing: inherit;
+    }
+    h1{
+        font-size: 3.5rem;
+    }
+    h3{
+        font-size: 3rem;
+        text-align: center;
+    }
+    a{
+        text-decoration: none;
+        font-style: normal;
+        color: black;
+    }
+    p, ul, code{
+        font-size: 2rem;
+        font-family: var(--fuente-texto);
+    }
+    h1 , h3{
+        font-family: var(--fuente-titulo);
+        margin: 0 auto;
+        line-height: 2;
+    }
+    .contenedor{
+        display: grid;
+        grid-template: ' menu . contenido'
+                        'menu . contenido' /
+                         400px 1fr 6fr;
+    }
+    .img-section{
+        border: 4px transparent var(--color-dos);
+        border-radius: 5px; 
+        width: 100%;
+        min-width: 400px;
+        max-height: 300PX;
+        max-width: 600px;
+        max-height: 400px;
+    }
+    .menu-nav{
+        background-color: var(--color-tres);
+        border-right: 1px solid;
+        border-radius: 0 10Px 10px 0;
+        box-shadow: inset 11px 11px 29px #965023,
+            inset -11px -11px 29px #ff9c43;
+        width: auto;
+        height: 100%;
+        grid-area: 'menu';
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+
+        position: fixed;
+        top: 0;
+        left: 0;
+    }
+    .presentacion-nav{
+        display: flex;
+        place-items: center;
+        gap: 10px;
+        padding: 15px;
+    }
+    #navbar{
+        text-align: center;
+        justify-content: space-between;
+        width: 250px;
+        height: 300px;
+        overflow: hidden;
+        transition: .5s;
+    }
+    #navbar:hover{
+        overflow-y: scroll;
+        width: 300px;
+    }
+    #navbar::-webkit-scrollbar{
+        width: 7px;
+        background-color: var(--color-dos);
+        border-radius: 15px;
+        padding: 1PX;
+    }
+    #navbar::-webkit-scrollbar-thumb{
+        background-color: var(--color-tres);
+        border: 1PX SOLID black;
+        border-radius: 15px;
+    }
+    
+    .contenedor-link{
+        width: 350px;
+        height: 500px;
+        display: grid;
+        gap: 20PX;
+        
+    }
+    .nav-link{
+        display: grid;
+        place-items: center;
+        place-self: center;
+        font-size: 1.5rem;
+
+        width: 200px;
+        height: 50PX;
+        background-color: var(--color-cinco);
+        color: color;
+        border: 2px inset var(--color-cuatro);
+        padding: 5px;
+        transition: 0.5s;
+    }
+    .nav-link:hover{
+      
+        width: 220px;
+        height: 70PX;
+        color:var(--color-cuatro);
+        background-color: var(--color-dos);
+        border: 1px solid var(--color-dos);
+        padding: 5px;
+    }
+    #main-doc{
+        grid-area: contenido;
+        width: 100%;
+    }
+    .main-section{
+        background: linear-gradient(145deg, #c66a2e, #eb7e37);
+        box-shadow:  5px 5px 10px #bb642b,
+                    -5px -5px 10px #fd883b;
+        padding: 15px;
+        margin-bottom: 10px;
+    }
+    @media screen and (max-width: 550px) {
+        .contenedor{
+            display: grid;
+            grid-template: ' menu menu' 110px   
+                            'contenido contenido' auto 
+                        ;
+        }
+        .menu-nav{
+            border-bottom: 1PX solid BLACK;
+            border-radius: 0px 0Px 10px 10PX;
+            width: 100%;
+            height: 110px;
+            overflow: hidden;
+            transition: 0.7S;
+        }
+        .menu-nav:hover{
+            border-radius: 0px 0Px 10px 10PX;
+            width: 100%;
+            height: 350px;
+            overflow: hidden;
+        }
+        .icono-pagina{
+            padding-right: 10px;
+        }
+        #navbar{
+            padding: 20PX;
+            border-radius:  0px 0Px 0px 10PX;
+            border-top: 0;
+
+            display: grid;
+            align-content: stretch;
+            justify-content: center;
+            gap: 10px;
+
+            width: 100%;
+            height: 200px;
+            overflow: hidden;
+            overflow-y: scroll;
+            position: relative;
+        }
+      
+        .nav-link{
+            width: 300px;
+        }
+        .nav-link:hover{
+            display: grid;
+            justify-content: center;
+            place-items: center;
+            width: 300px;
+        }
+    }
+    @media screen and (max-width: 850PX) and (min-width:550PX){
+        .presentacion-nav{
+            display: flex;
+            flex-direction: column;
+        }
+        #navbar{
+            display: grid;
+            justify-content: center;
+        }
+    }
+</style>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Pontano+Sans&family=Rubik+Bubbles&display=swap" rel="stylesheet">
+<html>
+    <div class="contenedor">
+        <header class="menu-nav">
+            <div class="presentacion-nav">
+                <!--foto de pagina-->
+                <img class="icono-pagina" src="https://img.icons8.com/stickers/100/000000/motorcycle.png"/>
+                <h1>MotoPasion</h1>
+            </div>
+            <nav id="navbar">
+                <header><h2>Proceso de Adqusicion</h2></header>
+                <div class="contenedor-link">
+                    <a class="nav-link" href="#Titan_CG150">Titan CG150</a>
+                    <a class="nav-link" href="#Bajaj_Ns200">Bajaj Ns200</a>
+                    <a class="nav-link" href="#Yamaha_F25">Yamaha F25</a>
+                    <a class="nav-link" href="#Benelli_Leoncino_250">Benelli Leoncino 250</a>
+                    <a class="nav-link" href="#Yamaha_R3">Yamaha R3</a>
+                </div>  
+            </nav>
+        </header>
+        <main id="main-doc">
+            <section id="Titan_CG150" class="main-section" >
+                <header><h3 class="titulo-section">Titan CG150</h3>
+                <img class="img-section" src="https://www.motolujan.com.ar/wp-content/uploads/2014/02/cualidad_a_destacar.jpg" alt="FotoTitan"></header>
+                <P>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Pariatur, obcaecati assumenda error cupiditate sint aut eos nisi quidem, laborum itaque repellendus laudantium ea quod animi! Sint repellendus doloribus quis dignissimos! Lorem ipsum, dolor sit amet consectetur adipisicing elit. Rerum deserunt nisi iusto eaque quod nam officia deleniti ea, sunt enim modi voluptatum voluptas. Doloribus molestiae magnam molestias repudiandae cum quam.</P>
+                <ul class="lista-section">
+                    <li>Motor Tipo Monocilíndrico, 4 tiempos, OHC y refrigerado por aire.</li>
+                    <li>Transmisión Tipo: 5 velocidades</li>
+                    <li>Capacidad de combustible:14 litros (reserva 2 litros).</li>
+                </ul>
+                <fieldset>
+                    <code>Dipisicing elit. Nesciunt dolorem repellat totam autem doloremque omnis, eos sapiente, possimus, voluptatem ipsa similique obcaecati et alias repudiandae perspiciatis? Eum nulla dolorum porro</code>
+                </fieldset>
+                <p>Sum dolor lorem lore sit amet consectetur adipisicing elit. Nostrum consequatur pertempora neque magnam ipsam nisi, quae libero a ad quo quis voluptates rerum nihil odio provident praesentium expedita sed vitae.</p>
+            </section>
+            <section id="Bajaj_Ns200" class="main-section" >
+                <header><h3 class="titulo-section">Bajaj Ns200</h3>
+                <img class="img-section" src="https://www.financialexpress.com/wp-content/uploads/2020/07/bajaj-pulsar-ns200-1-620x400.jpg" alt="FotoBajaj"></header>
+                <P>Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat voluptates illo ad, fuga minima esse architecto temporibus necessitatibus sed? Vitae libero non suscipit culpa quis. Ratione impedit suscipit tempora ut. orem ipsum dolor sit amet consectetur adipisicing elit. Animi alias quae velit veritatis molestiae iusto sit, voluptatem incidunt illo commodi, ratione mollitia fugit tempore. Iste saepe numquam aut asperiores reprehenderit?</P>
+                <ul class="lista-section">
+                    <li>Motor Tipo Monocilíndrico SOHC con triple bujía y 4 válvulas DTSi, Refrigeración líquida</li>
+                    <li>Transmisión Tipo: 5 velocidades</li>
+                    <li>Capacidad de combustible: 12 Litros</li>
+                </ul>
+                <fieldset>
+                    <code>Consequuntur consectetur incidunt magni, neque iste laudantium harum repudiandae tempore possimus voluptatibus nesciunt cupiditate eveniet non ipsam earum eum quo </code>
+                </fieldset>
+                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Inventore praesentium obcaecati quod vel dolore, sit sequi laborum officia deserunt odit? Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eligendi perspiciatis similique excepturi aliquam quia inventore cum ex itaque necessitatibus tempora sunt ratione distinctio natus hic velit repudiandae cumque, mollitia exercitationem. A corrupti quisquam, delectus iusto labore numquam totam inventore atque!</p>
+            </section>
+            <section id="Yamaha_F25" class="main-section" >
+                <header><h3 class="titulo-section">Yamaha F25</h3>
+                <img class="img-section" src="https://comotos.co/wp-content/uploads/2018/03/yamaha-fz25-negra-680x405.jpg" alt="FotoF25"></header>
+                <P>Blanditiis laboriosam sapiente ex praesentium aliquam, quae itaqorem ipsum dolor sit amet consectetur, adipisicing elit. Tempore numquam dolorem aut, quisquam veritatis voluptate, ut necessitatibus quas ipsa illo fugit saepe expedita ab nihil fuga cum voluptatem, quasi dolore! tempora necessitatibus molestiae, quam eius deleniti provident dolorum non illum et autem.</P>
+                <ul class="lista-section">
+                    <li>Motor Tipo monocilíndrico de 249 cc, 4T, SOHC, refrigerado por aire y sistema de alimentación de inyección electrónica.</li>
+                    <li>Transmisión Tipo: 5 velocidades</li>
+                    <li>Capacidad de combustible: 14 litros</li>
+                </ul>
+                <fieldset>
+                    <code>Sit amepsum dolor sit amet consectetur adipisicing elero aperiam ut illo deserunt ullam et reprehenderit </code>
+                </fieldset>
+                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Est numquam consequatur in fugiat minima ullam maxime rem ex, perspiciatis ratione maiores labratione vero. alias blanditiis quidem! Iusto voluptas quaerat eaque quasi quas, impedit ducimus natus?</p>
+            </section>
+            <section id="Benelli_Leoncino_250" class="main-section" >
+                <header><h3 class="titulo-section">Benelli Leoncino 250</h3>
+                <img class="img-section" src="https://benellimotosblog.files.wordpress.com/2018/06/b_k_speed_benelli_leoncino_scrambler_.jpg" alt="FotoBenelli"></header>
+                <P>Orro ipsam soluta unde veniam, voluptates nobis quisquam eveniet doloremque, asp Lorem ipsum dolor sit, amet consectetur adipisicing elit. Deleniti obcaecati sunt hic omnis vitae magnam, ducimus quam similique beatae ad corrupti totam repellat doloremque sapiente nemo officia deserunt expedita molestiae! ernatur dolore molestiae ratione pariatur beatae. Id, repudiandae.</P>
+                <ul class="lista-section">
+                    <li>Motor Tipo monocilíndrico de 249 cc, 4T, 4V, DOCH, refrigerado por aire y sistema de alimentación de inyección electrónica.</li>
+                    <li>Transmisión Tipo: 5 velocidades</li>
+                    <li>Capacidad de combustible: 12.5 Litros</li>
+                </ul>
+                <fieldset>
+                    <code>Amet consectetur adipisicing elit. Dolorem, non error laudantium quas quo eaque. Nostrum placeat corrupti dolore natus, soluta</code>
+                </fieldset>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquam a sint atque nam hieserunt ex quia ratione numquam suscipit ea illo beatae accusantium, ullam fugit vero inventore. Minima, dignissimos quidem.!</p>
+            </section>
+            <section id="Yamaha_R3"  class="main-section" >
+                <header><h3 class="titulo-section">Yamaha R3</h3>
+                <img class="img-section" src="https://ventos.site/wp-content/uploads/2021/02/2019-Yamaha-YZF-R3-Review-sport-motorcycle-6.jpg" alt="FotoR3"></header>
+                <P>Loremor sit, amet consectetur adipisicing elit. Minus excepturi omnis magnam beatae libero maiores quisquam rerum ullam molestiae. Minus repudiandae molestiarem ipsum dolor sit amet consectetur adipisicinpore ut quia cumque itaque iste quisquam labore atque numquam quidem!</P>
+                <ul class="lista-section">
+                    <li>Moto tiop bicilíndrico en línea, 4T, DOHC, Refrigeración líquida</li>
+                    <li>Transmisión Tipo: 6 velocidades </li>
+                    <li>Capacidad de combustible: 14 Litros</li>
+                </ul>
+                <fieldset>
+                    <code>Losit amet consectetur adipisicing elit. Distinctio, tempora soluta. Mollitia repudiandae magni nostrum impedit non recusandadi cupiditate beatae ut velit sint nesciunt repudiandae alias id?</code>
+                </fieldset>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Perspiciatis molestias magnam repellat eius tempora maxime corporis. Ex praesentium consectetur architecto, minima aliquid, provident doloremque, libero labore itaque amet nemo? Nihil.</p>
+            </section>
+        </main>
+    </div>
+</html>

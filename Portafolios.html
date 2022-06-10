@@ -1,0 +1,198 @@
+<style>
+    :root{
+        --color-uno:#cb1136;
+        --color-dos:#717978;
+        --color-tres:#93460c;
+        --color-cuatro:#EAFFF7;
+        --color-cinco:#e4b5d2;
+        --color-seis:#494f4e;
+
+        --fuente-uno: 'Lobster', cursive;
+        --fuente-dos:'Caveat', cursive;
+    }
+    html{
+        background-color:var(--color-seis);
+        font-family:   var(--fuente-uno);
+        scroll-behavior: smooth;
+        transition: 0.4s;
+    }
+    #navbar{
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 15vh;
+
+        letter-spacing: 1.5px;
+        background-color: var(--color-uno);
+
+        display: grid;
+        grid-auto-flow: column;
+        justify-content: space-around;
+        align-content: center;
+
+        overflow: hidden;
+        border-bottom: 5px inset hsla(335, 60%, 4%, 0.35);;
+    }
+    .nav-link{
+        text-decoration: none;
+        color: var(--color-cuatro);
+        text-decoration: solid;
+        padding: 10PX;
+        border-radius:  5px;
+    }
+    .nav-link:hover{
+        background-color: var(--color-cuatro);
+        color: var(--color-cuatro);
+        padding: 10px;
+        border-radius: 5px;
+        background: linear-gradient(145deg, #ff2755, #e32f53);
+        box-shadow:  5px 5px 14px #6a1627,
+             -5px -5px 14px #c32e65;
+        transition: 0.4s;
+    }
+    .nav-link:active{
+        color: var(--color-cuatro);
+        background: #FC345C;
+        box-shadow: inset 5px 5px 24px #651525,
+            inset -5px -5px 24px #e592a3;
+        transition: 0.5s;
+    }
+    .contenedor{
+        display: grid;
+        grid-template: 'presentacion presentacion' 
+                        'objetivo objetivo' 250px
+                        'trabajos trabajos' minmax(100vh,150vh) 
+                        'footer footer' 10vh;
+    }
+    #welcome-section{
+        grid-area: presentacion;
+
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        width: 100%;
+        margin-top: 15vh;
+        scroll-margin-top: 16vh;
+        border-radius: 10px;
+        border: 0.5px solid;    
+        background: linear-gradient(360deg, var(--color-dos) 0%,#343635 100%) ;
+    }
+    #presentacion{
+        margin-top: 80Px;
+        text-align: center;
+    }
+    #objetivo{
+        grid-area: objetivo;
+        text-align: center;
+        scroll-margin-top: 15vh;
+        max-width: 1200px;
+        min-width: 580px;
+        align-self: center;
+        justify-self: center;
+    }
+    #projects{
+        grid-area: trabajos;
+        display:flex;
+
+        flex-wrap:wrap;
+        justify-content: space-around;
+        align-items: center;
+        justify-self: center;
+        max-width: 1530px;
+    }
+    .project-tile{
+        background-color: var(--color-uno);
+        text-decoration: none;
+        color: black;
+        border-radius:  10px 0 10px 0 ;
+        border: 1px inset black;
+        text-align: center;
+    }
+    .project-image{
+        border-radius: 10px 0 0 0 ;
+    }
+
+    #mi-footer{
+        grid-area: footer;
+        display: flex;
+        background: linear-gradient(180deg, var(--color-dos) 0%,var(--color-cinco) 100%) ;
+        width: 100%;
+        border: 2PX solid;
+        align-items: center;
+        justify-content: space-around;
+    }
+    .link-contacto{
+        display: flex;
+        gap: 10px;
+        list-style: none;
+    }
+    .footer-link{
+        color: var(--color-uno);
+        text-decoration: none;
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        margin: 15px;
+    }
+    @media screen and (max-width: 768px) {
+        #navbar{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        overflow: hidden;
+        border-bottom: 5px inset hsla(335, 60%, 4%, 0.35);
+        }
+        #objetivo{
+            margin-bottom: 10px;
+        }
+    }
+</style>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Lobster&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Caveat&display=swap" rel="stylesheet">
+<html>
+    <nav id="navbar">
+        <a class="nav-link" href="#welcome-section">Presentacion</a>
+        <a class="nav-link" href="#objetivo">Proyectos</a>
+        <a class="nav-linK" href="#mi-footer">Contacto</a>
+    </nav>
+    <body class="contenedor">
+        <div id="welcome-section">
+            <div id="presentacion"><h1>¡ Hola, Soy Lautaro Alvarez!<p style="margin: 0;">Desarrollador Web FullStack</p></h1></div>
+        </div>
+        <div id="objetivo">
+                <h2>Mi Objetivo</h2>
+                <fieldset style="background-color: hsla(339, 66%, 50%, 0.392);">
+                    <code style=" font-size:25PX;">"Actualmente curso la carrera de Ingeniería en Sistemas de Información en la Universidad Tecnológica Nacional de Rosario, aspiro siempre a mejorar e ir descubriendo nuevas tegnologias con el paso del tiempo"</code>
+                </fieldset>
+        </div>
+        <div id="projects">
+
+            <a  href="https://codepen.io/lautarodalvarez/pen/oNpMqyR"  target="_blank" class=" project-tile">
+                <img class="project-image" src="https://shots.codepen.io/lautarodalvarez/pen/oNpMqyR-512.webp?version=1649801345" alt="project"/>
+                    <p class="project-title"><span class="code"></span>MotoPasion<span class="code"></span></p>
+            </a>
+            <a  href="https://codepen.io/lautarodalvarez/pen/WNdELrO"  target="_blank" class="project-tile">
+                <img class="project-image" src="https://shots.codepen.io/lautarodalvarez/pen/WNdELrO-512.webp?version=1648693232" alt="project"/>
+                    <p class="project-title"><span class="code"></span>Enfoquemonos & Co<span class="code"></span></p>
+            </a>
+            <a  href="https://codepen.io/lautarodalvarez/pen/vYpmVxz"  target="_blank" class="project-tile">
+                <img class="project-image" src="https://shots.codepen.io/lautarodalvarez/pen/vYpmVxz-512.webp?version=1648562316" alt="project"/>
+                    <p class="project-title"><span class="code"></span>Work Serching Dev<span class="code"></span></p>
+            </a>
+        </div> 
+    </body>
+    <footer id="mi-footer">
+                <h3>@Copyright 2022, Lautaro David Alvarez</h3>
+                <ul class="link-contacto">
+                    <li ><a id="profile-link" class="footer-link" href="https://codepen.io/lautarodalvarez" target="_blank">CodePen<img class="icon-contac" src="https://img.icons8.com/wired/64/000000/code.png"/></a></li>
+                    <li ><a class="footer-link" href="mailto:lautarodalvarez@gmail.com?Subject=Cambiar%20asunto"  target="_blank">Gmail <img class="icon-contac" src="https://img.icons8.com/wired/64/000000/gmail.png"/></a></li>
+                    <li ><a class="footer-link" href="https://www.instagram.com/alvarezlautaro_/" target="_blank">Instagram <img class="icon-contac" src="https://img.icons8.com/wired/64/000000/instagram-new--v1.png"/></a></li>
+                    <li ><a class="footer-link" href="https://www.linkedin.com/in/lautarodalvarez" target="_blank">LinkedIn <img class="icon-contac" src="https://img.icons8.com/wired/64/000000/linkedin--v1.png"/></a></li>
+                </ul>      
+    </footer>
+</html>

@@ -1,0 +1,120 @@
+<style>
+    html{
+        background-image: url(https://cdn.ipadizate.com/2019/04/ios-5.jpg);
+        width: 100%;
+        height: auto;
+        font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    }
+    #main{
+        display: grid;
+        justify-content: center;
+        margin: 0 auto;
+        padding: 30px;
+        border-radius: 15px;
+        border-color: transparent;
+        width: 80%;
+        box-shadow: -1px -2px 29px 3px rgba(0, 0, 0, 0.616);
+    }
+    #name-label,#lastname-label,#email-label,#fechaNacimiento-label,#number-label,legend{
+        padding-top: 15px;
+        padding-bottom: 5px;
+        font-size: 20px;
+    }
+    .int-c{
+        width: 100%;
+        border-radius: 15px;
+        border-color: transparent;
+    }
+    .text-h{
+        height: 150px;
+        background: linear-gradient(to right, rgba(199,255,46,1) 0%, rgba(97,177,22,1) 0%, rgba(109,195,27,0.8) 36%, rgba(129,228,37,0.8) 100%);
+    }
+    button{
+        width: 100%;
+        margin-top: 15px;
+        border-radius: 5PX;
+        border-color: transparent;
+        font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+        background-color:  greenyellow;
+    }
+    button:hover{
+        background-color: yellowgreen;
+    }
+    .backG{
+        background: linear-gradient(to right, rgba(183,250,0,1) 0%, rgba(183,250,0,1) 57%, rgba(107,195,24,1) 100%);    
+        width: max-content;
+        border-radius: 7.5px;
+    }
+    #email, #name, #number{
+        background: rgba(199,255,46,1);
+    }
+ 
+</style>
+
+<html>
+    <main id="main">
+        <header class="cabezera">
+            <h1 id="title">Work Serching Deveveloper</h1>
+            <p id="description">Simple encuesta para ver el conocimiento que uno maneja en el area</p>
+        </header>
+
+        <form id="survey-form" class="formulario">
+            
+            <label for="name" id="name-label">Nombre</label>
+            <input   id="name" class="int-c" type="text" placeholder="Ingrese su nombre completo" required>
+
+            <label for="lastname" id="lastname-label">Apellido</label>        
+            <input class="int-c" id="lastname" type="text" placeholder="Ingrese su Apellido" required>
+
+            <label for="email" id="email-label">E-mail</label>
+            <input class="int-c" type="email" name="email" id="email" placeholder="Ingrese su E-mail" required> 
+
+            <label for="fecha-nacimiento" id="fechaNacimiento-label">Fecha de Nacimiento</label> 
+            <input class="int-c" id="fecha-nacimiento" type="date" min="2004-01-01" required>
+
+            <label for="" id="number-label">Tiempo de Disponibilidad al dia (Hs)</label>
+            <input class="int-c" id="number" type="number" min='4' max="12" placeholder="4">
+           
+
+            
+                <legend>En que Instancias se encuentra?</legend>
+                <div class="backG"><input type="radio" id="trabajando" name="instancia" value="trab"><label for="trabajando">Trabajando</label></div>
+                <div class="backG"><input type="radio" id="estudiando" name="instancia" value="est"><label for="estudiando">Estudiando</label></div>
+                <div class="backG"><input type="radio" id="ambas" name="instancia" value="amb"><label for="ambas">Ambas</label></div>
+            
+
+            <div>
+                <legend>Nivel de estres que manejas en el rubro</legend>
+                <select name="dropdown" id="dropdown" class="int-c" >
+                    <option disabled selected value>-Regularidad de Estres-</option>
+                    <option value="muyPoco">Muy Poco</option>
+                    <option value="poco">Poco</option>
+                    <option value="regular">Regular</option>
+                    <option value="casiMucho">Casi Mucho</option>
+                    <option value="mucho">Mucho</option>
+                </select>
+            </div>
+            <div>
+                <legend>Que tipo de lenguaje tenes conocimiento</legend>
+                <div class="backG"><input type="checkbox" name="lenguajes" id="chek-h" value="ch1"><label for="chek-h">HTML</label></div>
+
+                <div class="backG"><input type="checkbox" name="lenguajes" id="chek-c" value="ch2"> <label for="chek-c">CSS</label></div>
+
+                <div class="backG"><input type="checkbox" name="lenguajes" id="chek-j" value="ch3"><label for="chek-j">JavaScript</label></div>
+
+                <div class="backG"><input type="checkbox" name="lenguajes" id="chek-a" value="ch4"><label for="chek-a">Angular</label></div>
+
+                <div class="backG"><input type="checkbox" name="lenguajes" id="chek-r" value="ch5"><label for="chek-r">React Js</label></div>
+
+                <div class="backG"><input type="checkbox" name="lenguajes" id="chek-n" value="ch6"><label for="chek-n">Node Js</label></div>
+
+                <div class="backG"><input type="checkbox" name="lenguajes" id="chek-m" value="ch7"><label for="chek-m">MySql</label></div><br>
+            </div>
+            <div>
+                <legend>Describe tu persona...</legend>
+                <textarea class="int-c text-h" type="textarea" placeholder="Describe tu perfil Profesional..."></textarea>
+            </div>
+            <button  type="submit" id="submit">Submit</button>
+        </form>
+    </main>
+</html>

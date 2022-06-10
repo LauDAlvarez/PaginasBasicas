@@ -1,0 +1,252 @@
+<style>
+    :root{
+        --color-letra-nav:rgb(255, 217, 0);
+        --color-fondo:#7cdcd4;
+        --color-fondo0scuro:#449c9c;
+        --color-bordeBoton:rgb(192, 165, 13);
+    }
+    html{
+        background-color: var(--color-fondo);
+        font-family: 'Righteous', cursive;
+    }
+    #header{
+        position: fixed;
+        top: 0;
+        left: 0;
+        
+        height: 75px;
+        width: 100%;
+        background-color: var(--color-fondo0scuro);
+    }
+    #nav-bar{
+        display: flex;
+        justify-content: space-between;
+    }
+
+    #header-img{
+        width: 100px ;
+        height: auto;
+    }
+    .title{
+        text-decoration: none;
+        color: black;
+        font-size: 15PX;
+    }
+    .links{
+        width: 50%;
+        display: flex;
+        justify-content: space-around;
+        align-self: center;   
+    }
+    .nav-link{
+        text-decoration: none;
+        padding: 5px;
+        color: var(--color-letra-nav);
+    }
+    .nav-link:hover{
+        color: #1e5c5c;
+        background-color: var(--color-letra-nav);
+        padding: 5px;
+        border-radius: 5px;
+    }
+    .body{
+        padding: 90px 25px 15px; 
+    }
+    #form{
+        display: flex;
+        flex-direction: row;
+        gap: 15px;
+        justify-content: center;
+    }
+    .ingreso-datos{
+        display: flex;
+        justify-content: center;
+        gap: 10px;
+    }
+    #email{
+        width: 350;
+        border-radius: 5px;
+        border-color: transparent;
+    }
+    
+    .submit-c{
+        border-radius: 5px;
+        border-color: var(--color-fondo0scuro);
+        background-color: var(--color-fondo);
+        color: var(--color-letra-nav);
+    }
+    .submit-c:hover{
+        border-radius: 5px;
+        border-color: var(--color-bordeBoton);
+        background-color: var(--color-letra-nav);
+        color: var(--color-fondo);
+    }
+    .ofertas{
+        padding: 10px;
+    }
+    .ofertas-g{
+        display: grid;
+        gap: 10px;
+        grid-template-columns: auto auto ;
+        width: auto;
+        align-items: center;
+        height: min-content;
+        -webkit-box-shadow: inset 0px 0px 13px 2px rgba(0,0,0,0.85);
+        -moz-box-shadow: inset 0px 0px 13px 2px rgba(0,0,0,0.85);
+        box-shadow: inset 0px 0px 13px 2px rgba(0,0,0,0.85);
+    }
+    
+    .imagenes-ofertas{
+        align-self: center;
+    }
+    #packs{
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        margin: 15px;
+        gap: 10px;
+    }
+    article{
+        text-align: center;
+        padding: 10px;
+        border-radius: 75px 0px 75px 0px;
+        -moz-border-radius: 75px 0px 75px 0px;
+        -webkit-border-radius: 75px 0px 5px 5px;
+        border: 1px solid #000000; 
+        background-color: var(--color-fondo0scuro);
+    }
+    .contenedor-video{
+        text-align: center;
+    }
+    #video{
+        text-align: center;
+        width: 100%;
+    }
+    @media screen and (max-width : 700px){
+        .title{
+            text-decoration: none;
+            color: black;
+            font-size: 12PX;
+        }
+        #packs{
+            display: flex;
+            flex-direction: column;
+        }  
+        .mas-info{
+            width: 100%;
+        }
+    }
+    footer{
+        background-color: #1e5c5c;
+        width: 100%;
+        padding: 5px;
+        text-align: right;
+    }
+    .presentacion{
+        text-align: center;
+    }
+</style>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Righteous&display=swap" rel="stylesheet">
+<html>
+    <div class="contenedor">
+        
+        <header id="header">
+            <nav id="nav-bar">
+                <a href="#"><img id="header-img" src="https://c.tenor.com/2RjDWqFi-4MAAAAC/video-film.gif" alt="img-nav"></a>
+        
+                <a class="title" href="#"><h1 >Enfoquemonos &Co.</h1></a>
+                <div class="links">
+                    <a class="nav-link" href="#ofertas">Que Ofrecemos?</a>
+                    <a class="nav-link" href="#video">Un poco de lo nuestro</a>
+                    <a class="nav-link" href="#packs">Packs</a>
+                </div>
+            </nav>
+        </header>
+        <main class="body">
+            <div>
+                <h3 id="recib-mails" class="presentacion">Somos un Grupos de Especialistas presentes para tu futuro</h3>
+                <form id="form" action="https://www.freecodecamp.com/email-submit">
+                    <input
+                      name="email"
+                      id="email"
+                      type="email"
+                      placeholder="Ingrese su mail para mas novedades"
+                      required
+                    />
+                    <input id="submit" type="submit" value="Submit" class="submit-c"/>
+                  </form>
+            </div>
+            <div id="ofertas">
+                <h3 class="presentacion">Mejora tu capacidad al maximo</h3>
+                <hr>
+                <div class="ofertas-g">
+                    <img class="imagenes-ofertas" src="https://img.icons8.com/wired/64/000000/4k.png"/>
+                    
+                    <p class="descripcion-oferta">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce lobortis felis vel libero tincidunt, rhoncus tempus velit tempus. Nam dapibus vitae ipsum non placerat. Morbi non metus quis orci tempus egestas.
+                    </p>
+                    
+                </div>
+                <hr>
+                <div class="ofertas-g">
+                    <img class="imagenes-ofertas" src="https://img.icons8.com/wired/64/000000/checkmark.png"/>
+                    <p class="descripcion-oferta">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce lobortis felis vel libero tincidunt, rhoncus tempus velit tempus. Nam dapibus vitae ipsum non placerat. Morbi non metus quis orci tempus egestas. Maecenas vel accumsan velit. Maecenas commodo at turpis in consectetur.
+                    </p>
+                    
+                </div>
+                <hr>
+                <div class="ofertas-g">
+                    <img class="imagenes-ofertas" src="https://img.icons8.com/pastel-glyph/64/000000/puzzle--v1.png"/>
+                    <p class="descripcion-oferta">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce lobortis felis vel libero tincidunt, rhoncus tempus velit tempus. Nam dapibus vitae ipsum non placerat. Morbi non metus quis orci tempus egestas. Maecenas vel accumsan velit. Maecenas commodo at turpis in consectetur. Morbi eu nibh vitae metus dignissim placerat varius eget sapien. Quisque in facilisis augue, eu sodales nisi. Aliquam ultricies sapien enim, nec venenatis quam dictum in.
+                    </p>
+                </div>
+            </div>
+            <div class="contenedor-video">
+                <br><h3 >Resultados del Curso</h3>
+                <iframe id="video" width="560" height="315" src="https://www.youtube.com/embed/be9cGEzCUFA" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </div>
+            <div id="packs">
+                <article>
+                    <h3>Pack Gratis</h3>
+                    <ul>
+                        <li>Acceso al contenido</li>
+                        <li>Descargar el contenido</li>
+                        <del><li>Consulta por VideoCall a nuestro personal</li>
+                        <li>Foro de consultas</li>
+                        <li>Acceso completo a nuestra plataforma</li>
+                        <li>Acceso a Becas internacionales</li></del>
+                    </ul>
+                    <a href="#"><button  class="submit-c mas-info">Mas Info +</button></a>
+                </article>
+                <article>
+                    <h3>Pack Regular</h3>
+                    <ul>
+                        <li>Acceso al contenido</li>
+                        <li>Descargar el contenido</li>
+                        <li>Consulta por VideoCall a nuestro personal</li>
+                        <li>Foro de consultas</li>
+                        <del><li>Acceso completo a nuestra plataforma</li>
+                        <li>Acceso a Becas internacionales</li></del>
+                    </ul>
+                    <a href="#"><button  class="submit-c mas-info">Mas Info +</button></a>
+                </article>
+                <article>
+                    <h3>Pack Premium</h3>
+                    <ul>
+                        <li>Acceso al contenido</li>
+                        <li>Descargar el contenido</li>
+                        <li>Consulta por VideoCall a nuestro personal</li>
+                        <li>Foro de consultas</li>
+                        <li>Acceso completo a nuestra plataforma</li>
+                        <li>Acceso a Becas internacionales</li>
+                    </ul>
+                    <a href="#"><button  class="submit-c mas-info">Mas Info +</button></a>
+                </article>
+            </div>
+        </main>
+        <footer>
+            <span>Copyright 2022, Enfoquemonos &Co</span>
+        </footer>
+    </div>
+</html>
